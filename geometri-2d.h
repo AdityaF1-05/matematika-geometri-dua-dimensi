@@ -16,4 +16,20 @@ class SegiEmpat {
 
 };
 
+class Lingkaran {
+    private:
+    double jarijari;
+    const double PHI = 3.14;
+
+    public:
+    Lingkaran(double j) {
+        setJariJari(j);
+    } 
+
+    void setJariJari(double j);
+    double getJariJari();
+
+    double luasLingkaran();
+};
+
 #endif
