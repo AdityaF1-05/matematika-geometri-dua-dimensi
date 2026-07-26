@@ -1,5 +1,6 @@
 #include "geometri-2d.h"
 #include <iostream>
+#include <iomanip>
 
 SegiEmpat::SegiEmpat(double s) {
     sisi = s;
@@ -37,4 +38,12 @@ void Lingkaran::luasLingkaran() {
     std::cout << "Hasil Perhitungan luas Lingkaran : ";
     std::cout << HitungLingkaran();
     std::cout << " Cm2";
+}
+
+void AppInfo::VersionProgram() {
+    std::cout << "\n\n======== INFO PROGRAM ========";
+    std::cout << "\nProgram ini merupakan percobaan untuk menghitung luas suatu bangun datar.";
+    std::cout << "\nMemiliki beberapa bangun datar yang bisa dihitung luasnya.";
+    std::cout << "\nAkan ada pembaruan di masa depan dan beberapa bangun datar yang bisa dihitung luasnya";
+    std::cout << "\n\nVersi Program : v1.1\n";
 }

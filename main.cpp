@@ -13,6 +13,8 @@ int main() {
     Lingkaran *ling = new Lingkaran(0.0);
     double inputL;
 
+    AppInfo *info = new AppInfo();
+
     string angkaPilihan;
     string mySisi;
     string myJariJari;
@@ -23,7 +25,8 @@ int main() {
         cout << "Silahkan pilih pilihan anda." << endl;
         cout << "\n1. Segi Empat";
         cout << "\n2. Lingkaran";
-        cout << "\n3. Selesai";
+        cout << "\n3. Info Program";
+        cout << "\n4. Selesai";
         cout << "\n\nNantikan fitur update berikutnya!";
 
         cout << "\n";
@@ -103,12 +106,22 @@ int main() {
                 }
 
                 case 3:
+
+                    info = new AppInfo();
+
+                    info->VersionProgram();
+
+                    delete info;
+                    info = nullptr;
+                    break;
+
+                case 4:
                     cout << "\nMemproses Exit. Program Selesai";
                     
                     return 0;
 
                 default:
-                    throw out_of_range("Pilihan hanya sampai 1 hingga 3 saja!");
+                    throw out_of_range("Pilihan hanya sampai 1 hingga 4 saja!");
             }
         }
 

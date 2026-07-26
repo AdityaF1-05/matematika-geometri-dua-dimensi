@@ -30,3 +30,4 @@ v1.1
 
 - [] Perbaikan bug kecil
 - [] Menambahkan fitur menghitung luas Lingkaran
+- [] Menambahkan Info Program dan menampilkan versinya

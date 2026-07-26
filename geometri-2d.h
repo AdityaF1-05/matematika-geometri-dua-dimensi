@@ -31,4 +31,10 @@ class Lingkaran {
     void luasLingkaran();
 };
 
+class AppInfo {
+
+    public:
+    void VersionProgram();
+};
+
 #endif
