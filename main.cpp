@@ -13,11 +13,15 @@ int main() {
     Lingkaran *ling = new Lingkaran(0.0);
     double inputL;
 
+    PersegiPanjang *persegi = new PersegiPanjang(0.0, 0.0);
+    double inputP, inputl;
+
     AppInfo *info = new AppInfo();
 
     string angkaPilihan;
     string mySisi;
     string myJariJari;
+    string myPanjang, myLebar;
 
     while (true) {
 
@@ -25,8 +29,9 @@ int main() {
         cout << "Silahkan pilih pilihan anda." << endl;
         cout << "\n1. Segi Empat";
         cout << "\n2. Lingkaran";
-        cout << "\n3. Info Program";
-        cout << "\n4. Selesai";
+        cout << "\n3. Persegi Panjang";
+        cout << "\n4. Info Program";
+        cout << "\n5. Selesai";
         cout << "\n\nNantikan fitur update berikutnya!";
 
         cout << "\n";
@@ -105,7 +110,55 @@ int main() {
                     break;
                 }
 
-                case 3:
+                case 3: 
+
+                    while (true) {
+                        try {
+                            cout << "\nMasukkan Input Panjang : ";
+                            getline(cin, myPanjang);
+
+                            if (myPanjang.empty()) {
+                                throw invalid_argument("\nNilai Kosong! harap isi dengan benar!");
+                            }
+
+                            inputP = stod(myPanjang);
+
+                            break;
+                        }
+                        catch (...) {
+                            cout << "\nHarap Masukkan nilai dengan benar!";
+                        }
+                    }
+
+                    while (true) {
+                        try {
+                            cout << "\nMasukkan Input Lebar : ";
+                            getline(cin, myLebar);
+
+                            if (myLebar.empty()) {
+                                throw invalid_argument("\nNilai Kosong! harap isi dengan benar!");
+                            }
+
+                            inputl = stod(myLebar);
+
+                            break;
+                        }
+                        catch (...) {
+                            cout << "\nHarap Masukkan nilai dengan benar!";
+                        }
+                    }
+
+                    persegi = new PersegiPanjang(0.0, 0.0);
+                    persegi->setPanjang(inputP);
+                    persegi->setLebar(inputl);
+
+                    persegi->LuasPersegiPanjang();
+
+                    delete persegi;
+                    persegi = nullptr;
+                    break;
+
+                case 4:
 
                     info = new AppInfo();
 
@@ -115,7 +168,7 @@ int main() {
                     info = nullptr;
                     break;
 
-                case 4:
+                case 5:
                     cout << "\nMemproses Exit. Program Selesai";
                     
                     return 0;

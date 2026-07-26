@@ -31,3 +31,8 @@ v1.1
 - [] Perbaikan bug kecil
 - [] Menambahkan fitur menghitung luas Lingkaran
 - [] Menambahkan Info Program dan menampilkan versinya
+
+v1.2
+
+- [] Improvisasi Input Ganda dan perbaikan bug
+- [] Menambahkan fitur menghitung luas Persegi Panjang

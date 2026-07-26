@@ -10,6 +10,11 @@ Lingkaran::Lingkaran(double j) {
     jarijari = j;
 }
 
+PersegiPanjang::PersegiPanjang(double p, double l) {
+    panjang = p;
+    lebar = l;
+}
+
 void SegiEmpat::setSisi(double s) {
     sisi = s;
 }
@@ -37,6 +42,32 @@ double Lingkaran::HitungLingkaran() {
 void Lingkaran::luasLingkaran() {
     std::cout << "Hasil Perhitungan luas Lingkaran : ";
     std::cout << HitungLingkaran();
+    std::cout << " Cm2";
+}
+
+void PersegiPanjang::setPanjang(double p) {
+    panjang = p;
+}
+
+void PersegiPanjang::setLebar(double l) {
+    lebar = l;
+}
+
+double PersegiPanjang::getPanjang() {
+    return panjang;
+}
+
+double PersegiPanjang::getLebar() {
+    return lebar;
+}
+
+double PersegiPanjang::HitungPersegiPanjang() {
+    return panjang * lebar;
+}
+
+void PersegiPanjang::LuasPersegiPanjang() {
+    std::cout << "\nHasil Luas dari Persegi Panjang : ";
+    std::cout << HitungPersegiPanjang();
     std::cout << " Cm2";
 }
 

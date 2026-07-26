@@ -31,6 +31,23 @@ class Lingkaran {
     void luasLingkaran();
 };
 
+class PersegiPanjang {
+    private:
+    double panjang;
+    double lebar;
+
+    public:
+    PersegiPanjang(double p, double l);
+
+    void setPanjang(double p);
+    void setLebar(double l);
+    double getPanjang();
+    double getLebar();
+    double HitungPersegiPanjang();
+
+    void LuasPersegiPanjang();
+};
+
 class AppInfo {
 
     public:
