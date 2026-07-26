@@ -22,14 +22,13 @@ class Lingkaran {
     const double PHI = 3.14;
 
     public:
-    Lingkaran(double j) {
-        setJariJari(j);
-    } 
+    Lingkaran(double j);
 
     void setJariJari(double j);
     double getJariJari();
+    double HitungLingkaran();
 
-    double luasLingkaran();
+    void luasLingkaran();
 };
 
 #endif

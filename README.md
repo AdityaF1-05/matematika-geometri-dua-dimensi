@@ -25,3 +25,8 @@ Fitur akan ditambahkan lagi untuk kedepannya, jangan pernah mengecualikan file h
 v1.0
 
 - [] Rilis awal Program
+
+v1.1
+
+- [] Perbaikan bug kecil
+- [] Menambahkan fitur menghitung Lingkaran

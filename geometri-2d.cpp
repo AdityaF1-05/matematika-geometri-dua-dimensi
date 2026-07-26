@@ -29,9 +29,12 @@ double Lingkaran::getJariJari() {
     return jarijari;
 }
 
-double Lingkaran::luasLingkaran() {
-     std::cout << "Luas Lingkaran yang didapatkan : ";
-     
-     return 2 * PHI * jarijari;
-     std::cout << " Cm2";
+double Lingkaran::HitungLingkaran() {
+    return 2 * PHI * jarijari;
+}
+
+void Lingkaran::luasLingkaran() {
+    std::cout << "Hasil Perhitungan luas Lingkaran : ";
+    std::cout << HitungLingkaran();
+    std::cout << " Cm2";
 }

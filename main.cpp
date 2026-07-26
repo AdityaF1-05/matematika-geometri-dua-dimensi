@@ -10,15 +10,20 @@ int main() {
     SegiEmpat *kotak = new SegiEmpat(0.0);
     double inputS;
 
+    Lingkaran *ling = new Lingkaran(0.0);
+    double inputL;
+
     string angkaPilihan;
     string mySisi;
+    string myJariJari;
 
     while (true) {
 
         cout << "\n\n====== Selamat Datang di Matematika Geometri ======\n";
         cout << "Silahkan pilih pilihan anda." << endl;
         cout << "\n1. Segi Empat";
-        cout << "\n2. Selesai";
+        cout << "\n2. Lingkaran";
+        cout << "\n3. Selesai";
         cout << "\n\nNantikan fitur update berikutnya!";
 
         cout << "\n";
@@ -67,13 +72,43 @@ int main() {
                     break;
                 }
 
-                case 2:
+                case 2: {
+                    bool isValid = false;
+
+                    while (!isValid) {
+                        try {
+                            cout << "\nMasukkan Input Jari - jari Lingkaran : ";
+                            getline(cin, myJariJari);
+
+                            if (myJariJari.empty()) {
+                                throw invalid_argument("Nilai Kosong! harap isi dengan benar!");
+                            }
+
+                            inputL = stod(myJariJari);
+                            isValid = true;
+                        }
+                        catch(...) {
+                            cout << "\nHarap Masukkan nilai dengan benar!";
+                        }
+                    }
+
+                    ling = new Lingkaran(0.0);
+                    ling->setJariJari(inputL);
+
+                    ling->luasLingkaran();
+
+                    delete ling;
+                    ling = nullptr;
+                    break;
+                }
+
+                case 3:
                     cout << "\nMemproses Exit. Program Selesai";
                     
                     return 0;
 
                 default:
-                    throw out_of_range("Pilihan hanya sampai 1 hingga 2 saja!");
+                    throw out_of_range("Pilihan hanya sampai 1 hingga 3 saja!");
             }
         }
 
