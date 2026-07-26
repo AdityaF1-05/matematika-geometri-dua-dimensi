@@ -29,4 +29,4 @@ v1.0
 v1.1
 
 - [] Perbaikan bug kecil
-- [] Menambahkan fitur menghitung Lingkaran
+- [] Menambahkan fitur menghitung luas Lingkaran
