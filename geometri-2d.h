@@ -48,6 +48,24 @@ class PersegiPanjang {
     void LuasPersegiPanjang();
 };
 
+class Segitiga {
+    private:
+    double tinggi;
+    double sisi;
+
+    public:
+    Segitiga(double t, double s);
+
+    void setTinggi(double t);
+    void setSisi(double s);
+    double getTinggi();
+    double getSisi();
+
+    double HitungLuasSegitiga();
+
+    void HasilSegitiga();
+};
+
 class AppInfo {
 
     public:
