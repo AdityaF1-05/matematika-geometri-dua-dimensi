@@ -15,6 +15,37 @@ PersegiPanjang::PersegiPanjang(double p, double l) {
     lebar = l;
 }
 
+Segitiga::Segitiga(double t, double s) {
+    tinggi = t;
+    sisi = s;
+}
+
+void Segitiga::setTinggi(double t) {
+    tinggi = t;
+}
+
+void Segitiga::setSisi(double s) {
+    sisi = s;
+}
+
+double Segitiga::getTinggi() {
+    return tinggi;
+}
+
+double Segitiga::getSisi() {
+    return sisi;
+}
+
+double Segitiga::HitungLuasSegitiga() {
+    return sisi * tinggi * 0.5;
+}
+
+void Segitiga::HasilSegitiga() {
+    std::cout << "Hasil Perhitungan Luas Segitiga : ";
+    std::cout << HitungLuasSegitiga();
+    std::cout << " Cm2";
+}
+
 void SegiEmpat::setSisi(double s) {
     sisi = s;
 }
@@ -76,5 +107,5 @@ void AppInfo::VersionProgram() {
     std::cout << "\nProgram ini merupakan percobaan untuk menghitung luas suatu bangun datar.";
     std::cout << "\nMemiliki beberapa bangun datar yang bisa dihitung luasnya.";
     std::cout << "\nAkan ada pembaruan di masa depan dan beberapa bangun datar yang bisa dihitung luasnya";
-    std::cout << "\n\nVersi Program : v1.1\n";
+    std::cout << "\n\nVersi Program : v1.3\n";
 }

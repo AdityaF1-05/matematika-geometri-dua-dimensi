@@ -16,12 +16,16 @@ int main() {
     PersegiPanjang *persegi = new PersegiPanjang(0.0, 0.0);
     double inputP, inputl;
 
+    Segitiga *segitiga = new Segitiga(0.0, 0.0);
+    double inputT, inputs;
+
     AppInfo *info = new AppInfo();
 
     string angkaPilihan;
     string mySisi;
     string myJariJari;
     string myPanjang, myLebar;
+    string mySisi_2, myTinggi;
 
     while (true) {
 
@@ -30,8 +34,9 @@ int main() {
         cout << "\n1. Segi Empat";
         cout << "\n2. Lingkaran";
         cout << "\n3. Persegi Panjang";
-        cout << "\n4. Info Program";
-        cout << "\n5. Selesai";
+        cout << "\n4. Segitiga";
+        cout << "\n5. Info Program";
+        cout << "\n6. Selesai";
         cout << "\n\nNantikan fitur update berikutnya!";
 
         cout << "\n";
@@ -42,7 +47,6 @@ int main() {
 
             if (angkaPilihan.empty()) {
                 throw invalid_argument("Input tidak boleh kosong! Harap isi ulang!");
-
             }
 
             int pilihanUser = stoi(angkaPilihan);
@@ -109,9 +113,7 @@ int main() {
                     ling = nullptr;
                     break;
                 }
-
                 case 3: 
-
                     while (true) {
                         try {
                             cout << "\nMasukkan Input Panjang : ";
@@ -122,7 +124,6 @@ int main() {
                             }
 
                             inputP = stod(myPanjang);
-
                             break;
                         }
                         catch (...) {
@@ -140,7 +141,6 @@ int main() {
                             }
 
                             inputl = stod(myLebar);
-
                             break;
                         }
                         catch (...) {
@@ -157,34 +157,75 @@ int main() {
                     delete persegi;
                     persegi = nullptr;
                     break;
-
+                
                 case 4:
+                    while (true) {
+                        try {
+                            cout << "\nMasukkan input tinggi Segitiga : ";
+                            getline(cin, myTinggi);
+
+                            if (myTinggi.empty()) {
+                                throw invalid_argument("Nilai Kosong! harap isi dengan benar!");
+                            }
+
+                            inputT = stod(myTinggi);
+                            break;
+                        }
+                        catch(...) {
+                            cout << "\nHarap Masukkan nilai dengan benar!";
+                        }
+                    }
+
+                    while (true) {
+                        try {
+                            cout << "Masukkan input sisi Segitiga : ";
+                            getline(cin, mySisi_2);
+
+                            if (mySisi_2.empty()) {
+                                throw invalid_argument("Nilai Kosong! harap isi dengan benar!");
+                            }
+
+                            inputs = stod(mySisi_2);
+                            break;
+                        }
+                        catch(...) {
+                            cout << "\nHarap Masukkan nilai dengan benar!";
+                        }
+                    }
+                    segitiga = new Segitiga(0.0, 0.0);
+                    segitiga->setSisi(inputs);
+                    segitiga->setTinggi(inputT);
+
+                    segitiga->HasilSegitiga();
+                    
+                    delete segitiga;
+                    segitiga = nullptr;
+                    break;
+
+                case 5:
 
                     info = new AppInfo();
-
                     info->VersionProgram();
 
                     delete info;
                     info = nullptr;
                     break;
 
-                case 5:
+                case 6:
                     cout << "\nMemproses Exit. Program Selesai";
                     
                     return 0;
 
                 default:
-                    throw out_of_range("Pilihan hanya sampai 1 hingga 4 saja!");
+                    throw out_of_range("Pilihan hanya sampai 1 hingga 6 saja!");
+                
             }
         }
-
         catch(invalid_argument& e) {
             cout << "[ERROR INPUT] " << e.what() << "\nSilahkan Coba lagi.\n";
         }
         catch(out_of_range& e) {
             cout << "[ERROR INPUT] " << e.what() << "\nSilahkan Coba lagi.\n";
         }
-
     }
-
 }
